@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs12 sm6 md6 >
+  <v-flex xs12 sm6 md6 lg4>
     <v-card height="100%">
       <v-card-media :src="document.image" height="200px"></v-card-media>
       <v-card-title>
