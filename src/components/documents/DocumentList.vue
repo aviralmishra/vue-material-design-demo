@@ -1,11 +1,11 @@
 <template>
-  <v-layout>
-    <v-container grid-list-md>
+  <v-container>
+    <v-layout>
       <v-layout row wrap>
         <document-list-item v-for="(item, i) in documents" :document="item" :key="i"/>
       </v-layout>
-    </v-container>
-  </v-layout>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

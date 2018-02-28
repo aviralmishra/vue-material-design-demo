@@ -1,6 +1,10 @@
 import Vue from 'vue';
+
 import Vuetify from 'vuetify';
 Vue.use(Vuetify);
+
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 
 import 'babel-polyfill';
 import App from './App.vue';

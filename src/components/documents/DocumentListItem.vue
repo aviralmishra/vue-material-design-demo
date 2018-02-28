@@ -1,22 +1,54 @@
 <template>
-  <v-flex xs12 sm6 md6 lg4>
+  <v-flex xs12 sm6 md6 lg4 class="py-1 px-1">
     <v-card height="100%">
       <v-card-media :src="document.image" height="200px"></v-card-media>
-      <v-card-title>
-        <div class="headline">{{document.title}}</div>
-      </v-card-title>
-      <v-card-text>
-        <div class="subheading">{{this.formattedStartDate}} - {{this.formattedClosingDate}}</div>
+      <v-layout row>
+        <v-flex xs9>
+          <v-card-title><div class="headline">{{document.title}}</div></v-card-title>
+        </v-flex>
+        <v-flex xs3>
+          <v-card-title class="mr-0 pr-0">
+            <div><v-btn icon color="primary"><v-icon>comment</v-icon></v-btn>{{document.comments}}</div>
+          </v-card-title>
+        </v-flex>
+      </v-layout>
+      <v-card-text class="my-0 py-0">
+        <v-progress-linear
+          :value="this.percentagePassed"
+          :color="this.daysRemaining > 30 ? 'primary' : 'red'"
+          class="my-0 py-0">
+          {{this.daysRemaining}}
+        </v-progress-linear>
+      </v-card-text>
+      <v-layout row justify-space-between class="my-0 py-0">
+        <div>
+          <v-card-text>
+            <span class="text-xs-left caption">
+              {{this.formattedStartDate}}
+            </span>
+          </v-card-text>
+        </div>
+        <div>
+          <v-card-text>
+            <span class="text-xs-left caption">
+              {{this.daysRemaining}} days remaining
+            </span>
+          </v-card-text>
+        </div>
+        <div>
+          <v-card-text>
+            <span class="text-xs-right caption">
+              {{this.formattedClosingDate}}
+            </span>
+          </v-card-text>
+        </div>
+      </v-layout>
+      <v-card-text class="my-0 py-0">
         <div class="subheading">{{document.description}}</div>
       </v-card-text>
-      <v-card-actions>
-        <v-progress-circular
-          :value="this.percentagePassed"
-          :color="this.daysRemaining > 30 ? 'primary' : 'red'">
-          {{this.daysRemaining}}
-        </v-progress-circular>
-        <v-btn icon color="primary"><v-icon>comment</v-icon></v-btn>
-        <span>{{document.comments}} Comments</span>
+      <v-card-actions class="ml-1">
+        <v-btn class="primary mt-5" dark>READ</v-btn>
+        <v-btn class="primary mt-5" dark>LEARN MORE</v-btn>
       </v-card-actions>
     </v-card>
   </v-flex>
@@ -24,11 +56,13 @@
 
 <script>
   import moment from 'moment';
+  import DocumentInfo from './DocumentInfo.vue';
 
   export default {
     name: 'DocumentListItem',
     props: ['document'],
     components: {
+      'document-info': DocumentInfo
     },
     computed: {
       daysRemaining: function() {
