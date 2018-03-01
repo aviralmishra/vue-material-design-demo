@@ -50,7 +50,11 @@
               </v-card-text>
               <v-card-actions class="ml-1">
                 <v-btn class="primary mt-5" dark>READ</v-btn>
-                <v-btn class="primary mt-5" dark>LEARN MORE</v-btn>
+                <router-link :to="{ name: 'document', params: { id: document.id } }">
+                  <v-btn class="primary mt-5" dark>
+                    LEARN MORE
+                  </v-btn>
+                </router-link>
               </v-card-actions>
             </v-flex>
           </v-layout>
@@ -98,9 +102,4 @@
 </script>
 
 <style lang="scss" scoped>
-  $list-item-color: #0011ee;
-
-  .document-list-item {
-    color: $list-item-color;
-  }
 </style>

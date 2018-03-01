@@ -46,9 +46,13 @@
       <v-card-text class="my-0 py-0">
         <div class="subheading">{{document.description}}</div>
       </v-card-text>
-      <v-card-actions class="ml-1">
-        <v-btn class="primary mt-5" dark>READ</v-btn>
-        <v-btn class="primary mt-5" dark>LEARN MORE</v-btn>
+      <v-card-actions class="ml-1 mt-3">
+        <v-btn class="primary" dark>READ</v-btn>
+        <router-link :to="{ name: 'document', params: { id: document.id } }">
+          <v-btn class="primary" dark>
+            LEARN MORE
+          </v-btn>
+        </router-link>
       </v-card-actions>
     </v-card>
   </v-flex>
@@ -92,9 +96,4 @@
 </script>
 
 <style lang="scss" scoped>
-  $list-item-color: #0011ee;
-
-  .document-list-item {
-    color: $list-item-color;
-  }
 </style>

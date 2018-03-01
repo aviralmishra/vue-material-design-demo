@@ -10,7 +10,38 @@
     "status": "Open",
     "startDate": "2018-02-01T00:00:00.000Z",
     "closingDate": "2018-03-15T00:00:00.000Z",
-    "comments": 21
+    "comments": 21,
+    "commentsText": [{
+        "action": "01 Feb 2018",
+        "headline": "Too dense",
+        "title": "Ali Connors",
+        "subtitle": " Voluptatum aperiam maxime similique cum est non aliquam sed."
+      },
+      {
+        "action": "01 Feb 2018",
+        "headline": "Too low",
+        "title": "Scrott, Jennifer",
+        "subtitle": "Amet quia repellat qui explicabo omnis enim sint."
+      },
+      {
+        "action": "03 Feb 2018",
+        "headline": "Too high",
+        "title": "Sandra Adams",
+        "subtitle": "Amet quia repellat qui explicabo omnis enim sint."
+      },
+      {
+        "action": "04 Feb 2018",
+        "headline": "Too many doors",
+        "title": "Trevor Hansen",
+        "subtitle": "Voluptatum aperiam maxime similique cum est non aliquam sed."
+      },
+      {
+        "action": "05 Feb 2018",
+        "headline": "Too many windows",
+        "title": "Britta Holt",
+        "subtitle": " Voluptatum aperiam maxime similique cum est non aliquam sed."
+      }
+    ]
   }, {
     "id": "f8f6ea4b-14c2-4759-8211-ac7cfb49fdb9",
     "title": "Expedita Minima",
@@ -39,7 +70,7 @@
     "closingDate": "2018-07-31T00:00:00.000Z",
     "comments": 0
   }, {
-    "id": "f8f6ea4b-14c2-4759-8211-ac7cfb49fdd9",
+    "id": "f8f6ea4b-14c2-4759-8211-ac7cfb49fde9",
     "title": "Kunze Bartell",
     "description": "Amet quia repellat qui explicabo omnis enim sint. Voluptatum aperiam maxime similique cum est non aliquam sed.",
     "image": "https://images.unsplash.com/photo-1510847532186-d17680f414d9",

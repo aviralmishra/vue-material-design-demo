@@ -21,7 +21,4 @@
 </script>
 
 <style lang="scss" scoped>
-  .document-list {
-    font-size: 1.2rem;
-  }
 </style>
